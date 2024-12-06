@@ -1,0 +1,206 @@
+/* All Elements */
+
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 18px;
+  box-sizing: border-box;
+  transition: 0.250s ease-in;
+}
+
+html, body > * {
+  color: #692E8D;
+}
+
+/* header content and navbar content */
+
+.header {
+  border-bottom: 1px solid #692E8D;
+  background-color: #E1D5A2;
+  display: flex;
+  width: 100%;
+  height: 8vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar > div {
+  display: flex;
+}
+
+.navbar-element_first {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar-element_second {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar > div > article {
+  font-size: 36px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+}
+
+.logo > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+}
+
+.btn-AsideCanvas {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  background-color: #692E8D;
+  color: #E1D5A2;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn-AsideCanvas:hover {
+  opacity: 0.8;
+}
+
+.btn-AsideCanvas:active {
+  opacity: 0.5;
+}
+
+/* main content */
+
+.main {
+  background-color: #E1D5A2;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.main > content {
+  font-size: 64px;
+  font-weight: bolder;
+}
+
+/* footer content */
+
+.footer {
+  border-top: 1px solid #692E8D;
+  background-color: #E1D5A2;
+  display: flex;
+  width: 100%;
+  height: 12vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > content {
+  font-size: 36px;
+}
+
+/* overflow */
+
+.overflow {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  opacity: 0.40;
+  background-color: black;
+  transition: 3s ease-in !important;
+}
+
+/* AsideCanvas */
+
+#awaitTrigger {
+  display: none;
+  width: 64px;
+  height: 64px;
+  background-color: #692e8d;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 10;
+  top: 8vh;
+  left: 0;
+  opacity: 0;
+}
+
+/* Link style */
+
+.link__style {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.link__style > a {
+  font-size: 24px;
+  color: #E1D5A2;
+}
+
+  .link__style > a:hover {
+    color: #fdf5d0;
+  }
+
+  .link__style > a:active {
+    color: #ffffff;
+  }
+
+.btn-close__style {
+position: absolute;
+right: 25px;
+top: 10px;
+font-size: 48px!important;
+transform: rotate(0deg);
+cursor: pointer;
+}
+
+/* Content position */
+
+#awaitTriggerOn {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/*
+  ##COMMENTS for JS
+    //awaitTrigger
+    0% {display: flex; opasity: 1;} 0.125s
+    20% {width: 384px; height: 64px; border-radius: 25px;} 0.125s
+    40% {width: 384px; height: 80vh;} 0.125s
+    60% {border-radius: 0px 25px 25px 0px;} 0.125s
+    //awaitTriggerOn
+    80% {opasity: 1; display: flex;} 0.125s
+    //btn-close
+    100% {rotate: 45deg} 0.125
+
+    $$ASYNC  ^time = 0.75s
+    //overflow
+    100% {display: block;} 0.625s
+*/
